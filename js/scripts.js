@@ -20,7 +20,7 @@ submit.addEventListener('click',
         // Salvo il valore dell'input "Age" dell'utente
 
         let userAge = document.getElementById("userAgeInput").value;
-        console.log("Nome e cognome dell'utente:", userAge);
+        console.log("L'utente è:", userAge);
 
         // Imposto il prezzo fisso al km
 
@@ -33,21 +33,16 @@ submit.addEventListener('click',
 
         // Se l'utente imposta "Minorenne", calcolo il prezzo del biglietto con il 20% di sconto
 
-        if (userAge = 'Minorenne') {
+        if (userAge === 'Minorenne') {
             TicketPrice = TicketPrice * 0.8;
             console.log('Il prezzo per i minorenni è:', TicketPrice);
         }
 
         // Se l'utente imposta "Over 65", calcolo il prezzo del biglietto con il 40% di sconto
 
-        else if (userAge = 'over65') {
+        else if (userAge === 'over65') {
             TicketPrice = TicketPrice * 0.6;
             console.log('Il prezzo per gli over 65 è:', TicketPrice);
-        }
-
-        else {
-            TicketPrice = TicketPrice * 1;
-            console.log('Il prezzo per i maggiorenni è:', TicketPrice);
         }
     
         // Stampo nell'HTML il valore dell'input "Nome e Cognome" dell'utente
